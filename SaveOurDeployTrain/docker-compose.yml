@@ -1,0 +1,39 @@
+---
+version: '3'
+
+services:
+  nginx:
+    build: ./nginx
+    image: nginx
+    container_name: nginx
+    ports:
+      - "80:80"
+    # volumes:
+    #   - code:/usr/share/nginx/html
+    # networks:
+    #   - Inception-network
+    restart: always
+   # depends_on:
+    #  - php
+  php:
+    #build: ./php
+    image: php:7-fpm
+    container_name: php
+    # volumes:
+    #   - code:/usr/share/nginx/html
+    # networks:
+    #   - Inception-network
+    restart: always
+
+# networks:
+#     Inception-network:
+#         name: Inception-network
+#         driver: bridge
+# volumes:
+#   code:
+#     driver: local
+#     driver_opts:
+#       type: none
+#       device: "/Users/anaselkassimi/Desktop/volumes/code"
+#       o: bind
+...
