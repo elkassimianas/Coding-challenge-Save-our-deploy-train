@@ -1,4 +1,4 @@
 # FROM debian:buster
-FROM php:7.4-fpm
+FROM php:7-fpm
 
 WORKDIR /home/app

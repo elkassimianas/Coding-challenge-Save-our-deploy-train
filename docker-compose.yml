@@ -8,8 +8,8 @@ services:
     container_name: nginx
     ports:
       - "80:80"
-    # volumes:
-    #   - code:/usr/share/nginx/html
+    volumes:
+      - code:/usr/share/nginx/html
     # networks:
     #   - Inception-network
     restart: always
@@ -19,8 +19,8 @@ services:
     #build: ./php
     image: php:7-fpm
     container_name: php
-    # volumes:
-    #   - code:/usr/share/nginx/html
+    volumes:
+      - code:/usr/share/nginx/html
     # networks:
     #   - Inception-network
     restart: always
@@ -29,11 +29,11 @@ services:
 #     Inception-network:
 #         name: Inception-network
 #         driver: bridge
-# volumes:
-#   code:
-#     driver: local
-#     driver_opts:
-#       type: none
-#       device: "/Users/anaselkassimi/Desktop/volumes/code"
-#       o: bind
+volumes:
+  code:
+    driver: local
+    driver_opts:
+      type: none
+      device: "./code"
+      o: bind
 ...
