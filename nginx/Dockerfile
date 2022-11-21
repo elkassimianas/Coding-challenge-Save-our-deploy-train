@@ -7,6 +7,6 @@ COPY . .
 
 EXPOSE 80
 
-RUN sh ./tools/setup.sh
+# RUN sh ./tools/setup.sh
 
-CMD [ "service", "nginx", "start" ]
+CMD [ "sh", "./tools/setup.sh" ]

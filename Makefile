@@ -9,4 +9,4 @@ down:
 config:
 	docker-compose -f docker-compose.yml config
 
-re: down clean all
+re: clean up
