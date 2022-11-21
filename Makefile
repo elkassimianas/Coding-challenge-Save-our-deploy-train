@@ -1,4 +1,4 @@
-all:
+up:
 	docker-compose -f docker-compose.yml up -d --build
 clean:
 	docker-compose -f docker-compose.yml down
